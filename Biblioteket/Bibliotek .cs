@@ -34,5 +34,12 @@ namespace Biblioteket
             else
                 return "error";
         }
+        public string HentAlleLaanere()
+        {
+            string laaners = "";
+            foreach (var item in _laaners)
+                laaners += $"Lånernummer: {item.laanerNummer}\nNavn: {item.navn}\n\n";
+            return laaners;
+        }
     }
 }
