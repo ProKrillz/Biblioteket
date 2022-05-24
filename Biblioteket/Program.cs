@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Biblioteket;
+
+Bibliotek biblo = new ("Sønderborg bibliotek");
+Console.WriteLine(biblo.HentBibliotek());
