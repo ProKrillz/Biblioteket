@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Biblioteket
 {
-    internal class Bibliotek
+    public class Bibliotek
     {
         string _biblioteksNavn;
+        List<Laaner> _laaners = new List<Laaner>();
 
         public Bibliotek(string name)
         {
@@ -17,6 +18,21 @@ namespace Biblioteket
         public string HentBibliotek()
         {
             return String.Format($"Velkommen til {_biblioteksNavn}\nDagens dato er: {DateTime.Today}");
+        }
+        public void OpretLaaner(int laanerNummer, string laanerNavn)
+        {
+            Laaner laaner = new Laaner(laanerNummer, laanerNavn);
+            _laaners.Add(laaner);
+        }
+        public string HentLaaner(int laanerNummer)
+        {
+            if (_laaners.Count > 0)
+            {
+            Laaner returnLaaner = _laaners.Find(x => x.laanerNummer == laanerNummer);
+            return String.Format($"Lånernummer: {returnLaaner.laanerNummer}\nNavn: {returnLaaner.navn}\nEr lånet hos: {_biblioteksNavn}");
+            }
+            else
+                return "error";
         }
     }
 }

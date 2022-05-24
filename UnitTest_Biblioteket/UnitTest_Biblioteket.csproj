@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteket\Biblioteket.csproj" />
+  </ItemGroup>
+
 </Project>
