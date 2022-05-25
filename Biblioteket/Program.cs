@@ -11,7 +11,7 @@ while (running)
             Console.ReadKey();
             break;
         case 2:
-            biblo.OpretLaaner(InputString("Navn: "));
+            biblo.OpretLaaner(InputString("Navn: "), InputString("Email: "));
             break;
         case 3:
             Console.WriteLine(biblo.HentAlleLaanere());
