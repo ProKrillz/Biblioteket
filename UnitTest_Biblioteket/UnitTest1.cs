@@ -11,7 +11,7 @@ namespace UnitTest_Biblioteket
             string name = "Name", biblo = "test";
             int number = 1;
             Bibliotek b = new (biblo);
-            b.OpretLaaner(number, name);
+            b.OpretLaaner(name);
 
             Assert.True(b.HentLaaner(1) == $"Lånernummer: {number}\nNavn: {name}\nEr lånet hos: {biblo}");
             

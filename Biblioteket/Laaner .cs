@@ -16,8 +16,5 @@ namespace Biblioteket
             this.laanerNummer = laanerNummer;
             this.navn = laanerNavn;
         }
-   
-
-
     }
 }

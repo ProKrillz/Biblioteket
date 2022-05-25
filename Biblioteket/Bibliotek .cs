@@ -10,6 +10,7 @@ namespace Biblioteket
     {
         string _biblioteksNavn;
         List<Laaner> _laaners = new List<Laaner>();
+        int _laanerNummer;
 
         public Bibliotek(string name)
         {
@@ -19,9 +20,9 @@ namespace Biblioteket
         {
             return String.Format($"Velkommen til {_biblioteksNavn}\nDagens dato er: {DateTime.Today}");
         }
-        public void OpretLaaner(int laanerNummer, string laanerNavn)
+        public void OpretLaaner(string laanerNavn)
         {
-            Laaner laaner = new Laaner(laanerNummer, laanerNavn);
+            Laaner laaner = new Laaner(++_laanerNummer, laanerNavn);
             _laaners.Add(laaner);
         }
         public string HentLaaner(int laanerNummer)
