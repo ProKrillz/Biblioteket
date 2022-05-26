@@ -47,5 +47,15 @@ namespace Biblioteket
             else
                 return "Error: Ingen personer oprettet";
         }
+        public string FindLaaner(int laanerNummer)
+        {
+            if (_laaners.Count > 0)
+            {
+                Laaner returnLaaner = _laaners.Find(x => x.laanerNummer == laanerNummer);
+                return String.Format($"Lånernummer: {returnLaaner.laanerNummer}\nNavn: {returnLaaner.Name}\nEmail: {returnLaaner.Email}");
+            }
+            else
+                return "error";
+        }
     }
 }

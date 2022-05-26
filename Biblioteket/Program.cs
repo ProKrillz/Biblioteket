@@ -3,7 +3,7 @@ Bibliotek biblo = new("Sønderborg bibliotek");
 bool running = true;
 while (running)
 {
-    switch (InputInt("Menu\n\n1: Vis bibloteks navn og dato\n2: Opret bruger\n3: Udskriv lånnere\n4: Afslut "))
+    switch (InputInt("Menu\n\n1: Vis bibloteks navn og dato\n2: Opret bruger\n3: Udskriv lånnere\n4: Find låner\n5: Afslut "))
     {
         case 1:
             Console.Clear();
@@ -18,6 +18,9 @@ while (running)
             Console.ReadKey();
             break;
         case 4:
+            Console.WriteLine(biblo.FindLaaner(InputInt("Skriv låner id: ")));
+            break;
+        case 5:
             running = false;
             break;
         default:
