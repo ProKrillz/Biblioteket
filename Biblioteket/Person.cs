@@ -10,19 +10,40 @@ namespace Biblioteket
     {
         string _name;
         string _email;
+        List<Bog> _boger;
         public string Name
         {
             get
-            { return _name; }
+            { 
+                return _name; 
+            }
             set
-            { _name = value; }
+            { 
+                _name = value;
+            }
         }
         public string Email
         {
             get
-            { return _email; }
+            { 
+                return _email;
+            }
             set
-            { _email = value; }
+            { 
+                _email = value; 
+            }
         }
+        public List<Bog> Boger
+        {
+            get
+            {
+                return _boger;
+            }
+            set
+            {
+                _boger = value;
+            }
+        }
+
     }
 }

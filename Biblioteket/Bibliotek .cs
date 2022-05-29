@@ -15,6 +15,7 @@ namespace Biblioteket
         public Bibliotek(string name)
         {
             _biblioteksNavn = name;
+            OpretBog();
         }
         public string HentBibliotek()
         {
@@ -56,6 +57,22 @@ namespace Biblioteket
             }
             else
                 return "error";
+        }
+        static void OpretBog()
+        {
+            Bog bog1 = new Bog();
+            bog1.Titel = "De blå bæster";
+            bog1.Forfatter = "R.L Stine";
+            bog1.IsbnNummer = "8721018707";
+
+            Bog bog2 = new Bog();
+            bog2.Titel = "Bogen om C# 9.0";
+            bog2.Titel = "Michell Cronberg";
+            bog2.IsbnNummer = "9788799338238";
+        }
+        public void LaanBog()
+        {
+
         }
     }
 }

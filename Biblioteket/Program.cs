@@ -19,6 +19,7 @@ while (running)
             break;
         case 4:
             Console.WriteLine(biblo.FindLaaner(InputInt("Skriv låner id: ")));
+            Console.ReadKey();
             break;
         case 5:
             running = false;
