@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Biblioteket
+﻿namespace Biblioteket
 {
     public class Person
     {
         string _name;
         string _email;
-        List<Bog> _boger;
+        List<Bog> _boger = new();
         public string Name
         {
             get
@@ -43,6 +37,21 @@ namespace Biblioteket
             {
                 _boger = value;
             }
+        }
+        /// <summary>
+        /// udlånner bog til brugere
+        /// </summary>
+        /// <param name="bogen"></param>
+        /// <returns>string</returns>
+        public string LaanBog(Bog bogen)
+        {
+            if (bogen != null)
+            {
+                bogen.Udlaansdato = DateTime.Now;
+                _boger.Add(bogen);
+                return $"{bogen.Titel} er udlånt";
+            }
+            return "Der er sket en fejl";
         }
 
     }
