@@ -72,8 +72,6 @@ In this program you can create persons and a libery.
 
     Use parameter to rent bog to Person.
 
-## Known issus
-
-You can create a user wtih enter press.
+## Known issues
 
 if you input a number in ValgPerson where the number is not in list the program will crash.
